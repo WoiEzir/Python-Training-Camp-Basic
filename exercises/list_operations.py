@@ -10,14 +10,25 @@
 def student_list_operations(students, operation, *args):
     """
     对学生列表进行操作
-    
+
     参数:
     - students: 学生列表
     - operation: 操作类型 ("add", "remove", "update")
     - args: 操作所需的额外参数
-    
+
     返回:
     - 操作后的学生列表
     """
     # 请在下方编写代码
-    pass 
+    pass
+    if operation == "add":
+        if len(args) >= 1:
+            students.append(args[0])
+    elif operation == "remove":
+        if len(args) >= 1 and args[0] in students:
+            students.remove(args[0])
+    elif operation == "update":
+        if len(args) >= 2 and args[0] in students:
+            index = students.index(args[0])
+            students[index] = args[1]
+    return students

@@ -19,4 +19,10 @@ def find_first_even(numbers):
     - 列表中的第一个偶数，如果没有偶数则返回None
     """
     # 请在下方编写代码
-    pass 
+    pass
+    n = 0
+    while n < len(numbers):
+        if numbers[n] % 2 == 0:
+            return numbers[n]
+        n += 1
+    return None
